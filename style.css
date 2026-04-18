@@ -1,0 +1,29 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; margin: 0; background: #f0f2f5;
+}
+
+.container {
+    text-align: center; background: #fff; padding: 2rem;
+    border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#display {
+    font-family: 'Courier New', monospace; font-size: 3rem; font-weight: bold;
+    background: #1a1a2e; color: #00ff88; padding: 1rem 1.5rem;
+    border-radius: 8px; margin: 1.5rem 0; letter-spacing: 2px;
+}
+
+.buttons button {
+    padding: 0.7rem 1.5rem; margin: 0.4rem; font-size: 1rem;
+    border: none; border-radius: 6px; cursor: pointer; color: #fff;
+}
+
+#startBtn { background-color: #28a745; }
+#stopBtn  { background-color: #dc3545; }
+#resetBtn { background-color: #6c757d; }
+
+button:disabled {
+    background-color: #ccc; cursor: not-allowed;
+}
