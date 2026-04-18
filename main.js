@@ -15,14 +15,14 @@ function formatTime(sec) {
 }
 
 function updateDisplay() {
-    display.textContent = formatTime(totalSeconds);
+    display.textContent = formatTime(Seconds);
 }
 
 function startTimer() {
     if (!Start) {
         Start = true;
         timer = setInterval(() => {
-            totalSeconds++;
+            Seconds++;
             updateDisplay();
         }, 1000);
         startBtn.disabled = true;
@@ -41,7 +41,7 @@ function stopTimer() {
 
 function resetTimer() {
     stopTimer();
-    totalSeconds = 0;
+    Seconds = 0;
     updateDisplay();
     startBtn.disabled = false;
     stopBtn.disabled = true;
@@ -51,5 +51,6 @@ startBtn.addEventListener('click', startTimer);
 stopBtn.addEventListener('click', stopTimer);
 resetBtn.addEventListener('click', resetTimer);
 
+// Инициализация
 updateDisplay();
 stopBtn.disabled = true;
